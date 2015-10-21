@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master1.master.cs" Inherits="Master1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body style="background-color: black">
+    <form id="form1" runat="server">
+        <table aria-autocomplete="none" class="auto-style1" style="background-color: #C0C0C0">
+            <tr>
+                <td colspan="2" style="height: 48px;">
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="Default.aspx" Text="Principal" Value="Principal"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="About.aspx" Text="Acerca de..." Value="Nuevo elemento"></asp:MenuItem>
+
+                        </Items>
+                    </asp:Menu>
+                    <asp:LinkButton ID="btnCambiaMaster" runat="server" OnClick="btnCambiaMaster_Click">Cambiar Master</asp:LinkButton>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 48px">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/ubuntu-logo32.png" />
+                </td>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 48px">&nbsp;</td>
+            </tr>
+        </table>
+        <div>
+
+
+            <footer>
+                <p>Power by Jonaguiper- <%:DateTime.Now.Year %></p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
